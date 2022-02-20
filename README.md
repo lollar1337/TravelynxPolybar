@@ -13,7 +13,9 @@ a Module to view your Travelynx Status and notify about Delay/Next Stops
 
 ## Dependencies
 
-* You need curl installed and a API Key from your Travelynx.de Account.
+* You need ```curl``` and ```jq```.
+
+* Your API Key from [Travelynx](https://travelynx.de/).
 
 * You also need Googles Material Design Icons for the Train Symbol
 
