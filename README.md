@@ -22,6 +22,12 @@ a Module to view your Travelynx Status and notify about Delay/Next Stops
 https://aur.archlinux.org/packages/ttf-material-design-icons-git
 ```
 
+[FREEBSD](https://pkg.freebsd.org/FreeBSD:13:amd64/latest/All/material-icons-ttf-5.0.1.pkg)
+```ini
+https://pkg.freebsd.org/FreeBSD:13:amd64/latest/All/material-icons-ttf-5.0.1.pkg
+```
+
+
 ## Module
 
 ```ini
