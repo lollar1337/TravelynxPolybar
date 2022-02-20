@@ -14,6 +14,7 @@ API_KEY=
 NOTIFICATIONS_NEXT_STOP="true"
 NOTIFICATIONS_DELAY="true"
 LANGUAGE="DE"
+SYMBOL=""
 
 
 while true; do
@@ -79,35 +80,35 @@ while true; do
 
         
         # Sending a Notification if an ICE Train is delayed	
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "ICE" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ]
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "ICE" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ]
 	then
 		notificationDelaySent="true"
 		notify-send "Zugverspätung:" "Information zu $trainType $trainNo nach $toStation Ankuft heute $actualArrivalTimeDate anstatt $arrivalTimeDate"
 	fi
 
         # Sending a Notification if an ICE Train is delayed	
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "ICE" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "ICE" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
 	then
 		notificationDelaySent="true"
 		notify-send "Delay:" "Information on $trainType $trainNo to $toStation arrival today $actualArrivalTimeDate instead of $arrivalTimeDate"
 	fi
 
 	# Sending a Notification if an IC Train is delayed
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ]
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ]
 	then
 		notificationDelaySent="true"
 		notify-send "Zugverspätung:" "Information zu $trainType $trainNo nach $toStation Ankuft heute $actualArrivalTimeDate anstatt $arrivalTimeDate"
 	fi
 
 	# Sending a Notification if an IC Train is delayed
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType == "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
 	then
 		notificationDelaySent="true"
 		notify-send "Delay:" "Information on $trainType $trainNo to $toStation arrival today $actualArrivalTimeDate instead of $arrivalTimeDate"
 	fi
 
 	# Sending a Notification if other (not ICE/IC) Train is	delayed
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ] 
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "DE" ] 
 	then
 		notificationDelaySent="true"
 		notify-send "Zugverspätung:" "Information zu $trainType $trainLine nach $toStation Ankuft heute $actualArrivalTimeDate anstatt $arrivalTimeDate"
@@ -115,7 +116,7 @@ while true; do
 
 
 	# Sending a Notification if other (not ICE/IC) Train is	delayed
-	if [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
+	if [ $isCheckedIn = "true" ] && [ "$actualArrivalTime" -gt "$arrivalTime" ] && [ $notificationDelaySent == "false" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $NOTIFICATIONS_DELAY == "true" ] && [ $LANGUAGE == "EN" ]
 	then
 		notificationDelaySent="true"
 		notify-send "Delay:" "Information on $trainType $trainLine to $toStation arrival today $actualArrivalTimeDate instead of $arrivalTimeDate"
@@ -163,36 +164,36 @@ while true; do
 	# Showing the Label for Polybar
 	if [ $isCheckedIn == "true" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $LANGUAGE == "DE" ] 
 	then
-		echo "" $trainType $trainLine "nach" $toStation
+		echo $SYMBOL $trainType $trainLine "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo "" $trainType $trainLine "to" $toStation
+		echo $SYMBOL $trainType $trainLine "to" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "IC" ] && [ $LANGUAGE == "DE" ]
 	then
-		echo "" $trainType $trainNo "nach" $toStation
+		echo $SYMBOL $trainType $trainNo "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "IC" ] && [ $LANGUAGE == "EN" ]
 	then
-	        echo "" $trainType $trainNo "to" $toStation
+	        echo $SYMBOL $trainType $trainNo "to" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "ICE" ] && [ $LANGUAGE == "DE" ]
 	then
-		echo "" $trainType $trainNo "nach" $toStation
+		echo $SYMBOL $trainType $trainNo "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "ICE" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo "" $trainType $trainNo "to" $toStation
+		echo $SYMBOL $trainType $trainNo "to" $toStation
 	elif [ $isCheckedIn == "false" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo " not checked in"
+		echo $SYMBOL" not checked in"
                 notificationDelaySent="false"
                 notificationLastDelay=0
                 notificationNextStopSent="true"
 	else
-		echo " nicht eingecheckt"
+		echo $SYMBOL" nicht eingecheckt"
 		notificationDelaySent="false"
 		notificationLastDelay=0
 		notificationNextStopSent="true"
 		notificationNextStopTime=""
 	fi
 	sleep $INTERVAL
-        #clear
+        clear
 
 done
