@@ -16,8 +16,10 @@ a Module to view your Travelynx Status and notify about Delay/Next Stops
 * You need curl installed and a API Key from your Travelynx.de Account.
 
 * You also need Googles Material Design Icons for the Train Symbol
-[AUR](https://aur.archlinux.org/packages/ttf-material-design-icons-git)
 
+```ini
+[AUR](https://aur.archlinux.org/packages/ttf-material-design-icons-git)
+```
 
 ## Module
 
