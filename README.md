@@ -70,8 +70,14 @@ Set to "true" to receive Notifications about current Delays on your Journey, "fa
 NOTIFICATIONS_DELAY="true"
 ```
 
-Set to "DE" to have the Module output everything in German, set to "EN" to have the Module output everything in English
+Set to "DE" to have the Module output everything in German, set to "EN" to have the Module output everything in English.
 
 ```ini
 LANGUAGE="DE"
+```
+
+Set your Symbol for infront of the Text in Polybar, set "" for no Symbol. (Standard uses a Train Symbol from Googles Material Icons)
+
+```ini
+SYMBOL=""
 ```
