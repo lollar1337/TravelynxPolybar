@@ -17,8 +17,9 @@ a Module to view your Travelynx Status and notify about Delay/Next Stops
 
 * You also need Googles Material Design Icons for the Train Symbol
 
-```ini
 [AUR](https://aur.archlinux.org/packages/ttf-material-design-icons-git)
+```ini
+https://aur.archlinux.org/packages/ttf-material-design-icons-git
 ```
 
 ## Module
