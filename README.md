@@ -24,3 +24,30 @@ type = custom/script
 exec = ~/.config/polybar/train.sh
 tail = true
 ```
+
+## Options in train.sh
+
+![Screenshot of the Module](https://github.com/thisjade/TravelynxPolybar/blob/8d8d950e8b6b1cdb807aebd3549ccb4b88596d8d/travelynx_needed_things.png "Screenshot")
+
+Generate a API Key on the "Generieren/Generate" Button and then Copy the Part that is currently blurred out on my end.
+
+```ini
+API_KEY=
+```
+Set to "true" to receive Next Stop Notifications on every Step on your Journey, "false" will disable that.
+
+```ini
+NOTIFICATIONS_NEXT_STOP="true"
+```
+
+Set to "true" to receive Notifications about current Delays on your Journey, "false" will disable that.
+
+```ini
+NOTIFICATIONS_DELAY="true"
+```
+
+Set to "DE" to have the Module output everything in German, set to "EN" to have the Module output everything in English
+
+```ini
+LANGUAGE="DE"
+```
