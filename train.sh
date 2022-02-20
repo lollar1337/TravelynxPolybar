@@ -164,36 +164,35 @@ while true; do
 	# Showing the Label for Polybar
 	if [ $isCheckedIn == "true" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $LANGUAGE == "DE" ] 
 	then
-		echo $SYMBOL $trainType $trainLine "nach" $toStation
+		echo "$SYMBOL" $trainType $trainLine "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType != "ICE" ] && [ $trainType != "IC" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo $SYMBOL $trainType $trainLine "to" $toStation
+		echo "$SYMBOL" $trainType $trainLine "to" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "IC" ] && [ $LANGUAGE == "DE" ]
 	then
-		echo $SYMBOL $trainType $trainNo "nach" $toStation
+		echo "$SYMBOL" $trainType $trainNo "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "IC" ] && [ $LANGUAGE == "EN" ]
 	then
-	        echo $SYMBOL $trainType $trainNo "to" $toStation
+	        echo "$SYMBOL" $trainType $trainNo "to" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "ICE" ] && [ $LANGUAGE == "DE" ]
 	then
-		echo $SYMBOL $trainType $trainNo "nach" $toStation
+		echo "$SYMBOL" $trainType $trainNo "nach" $toStation
 	elif [ $isCheckedIn == "true" ] && [ $trainType == "ICE" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo $SYMBOL $trainType $trainNo "to" $toStation
+		echo "$SYMBOL" $trainType $trainNo "to" $toStation
 	elif [ $isCheckedIn == "false" ] && [ $LANGUAGE == "EN" ]
 	then
-		echo $SYMBOL" not checked in"
+		echo "$SYMBOL"" not checked in"
                 notificationDelaySent="false"
                 notificationLastDelay=0
                 notificationNextStopSent="true"
 	else
-		echo $SYMBOL" nicht eingecheckt"
+		echo "$SYMBOL"" nicht eingecheckt"
 		notificationDelaySent="false"
 		notificationLastDelay=0
 		notificationNextStopSent="true"
 		notificationNextStopTime=""
 	fi
 	sleep $INTERVAL
-        clear
 
 done
