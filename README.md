@@ -17,28 +17,6 @@ a Module to view your Travelynx Status and notify about Delay/Next Stops
 
 * Your API Key from [Travelynx](https://travelynx.de/).
 
-* You also need Googles Material Design Icons for the Train Symbol
-
-[AUR](https://aur.archlinux.org/packages/ttf-material-design-icons-git)
-```ini
-https://aur.archlinux.org/packages/ttf-material-design-icons-git
-```
-
-[FreeBSD](https://pkg.freebsd.org/FreeBSD:13:amd64/latest/All/material-icons-ttf-5.0.1.pkg)
-```ini
-https://pkg.freebsd.org/FreeBSD:13:amd64/latest/All/material-icons-ttf-5.0.1.pkg
-```
-
-[Ubuntu](http://archive.ubuntu.com/ubuntu/pool/universe/f/fonts-material-design-icons-iconfont/fonts-material-design-icons-iconfont_5.0.1-2_all.deb)
-```ini
-http://archive.ubuntu.com/ubuntu/pool/universe/f/fonts-material-design-icons-iconfont/fonts-material-design-icons-iconfont_5.0.1-2_all.deb
-```
-
-[Fedora](https://download-ib01.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/m/material-icons-fonts-4.0.0-6.fc36.noarch.rpm)
-```ini
-https://download-ib01.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/m/material-icons-fonts-4.0.0-6.fc36.noarch.rpm
-```  
-  
 
 ## Module
 
